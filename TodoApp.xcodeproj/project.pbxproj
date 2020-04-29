@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,12 @@
 		527E9DD92457D23500DAD0E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 527E9DD72457D23500DAD0E1 /* Main.storyboard */; };
 		527E9DE52457D23500DAD0E1 /* TodoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E9DE42457D23500DAD0E1 /* TodoAppTests.swift */; };
 		527E9DF02457D23500DAD0E1 /* TodoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E9DEF2457D23500DAD0E1 /* TodoAppUITests.swift */; };
+		527E9DFF2457D34700DAD0E1 /* RxGRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 527E9DFE2457D34700DAD0E1 /* RxGRDB */; };
+		527E9E012457F68700DAD0E1 /* AppDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E9E002457F68700DAD0E1 /* AppDatabase.swift */; };
+		527E9E04245808E500DAD0E1 /* ToDoTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E9E03245808E500DAD0E1 /* ToDoTask.swift */; };
+		527E9E062458124000DAD0E1 /* DbContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E9E052458124000DAD0E1 /* DbContext.swift */; };
+		527E9E08245812B900DAD0E1 /* DbManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E9E07245812B900DAD0E1 /* DbManager.swift */; };
+		527E9E0A2458197800DAD0E1 /* ToDoTaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E9E092458197800DAD0E1 /* ToDoTaskManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +54,11 @@
 		527E9DEB2457D23500DAD0E1 /* TodoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		527E9DEF2457D23500DAD0E1 /* TodoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAppUITests.swift; sourceTree = "<group>"; };
 		527E9DF12457D23500DAD0E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		527E9E002457F68700DAD0E1 /* AppDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatabase.swift; sourceTree = "<group>"; };
+		527E9E03245808E500DAD0E1 /* ToDoTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTask.swift; sourceTree = "<group>"; };
+		527E9E052458124000DAD0E1 /* DbContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbContext.swift; sourceTree = "<group>"; };
+		527E9E07245812B900DAD0E1 /* DbManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbManager.swift; sourceTree = "<group>"; };
+		527E9E092458197800DAD0E1 /* ToDoTaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTaskManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				527E9DFF2457D34700DAD0E1 /* RxGRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +111,10 @@
 			isa = PBXGroup;
 			children = (
 				527E9DCE2457D23400DAD0E1 /* AppDelegate.swift */,
+				527E9E002457F68700DAD0E1 /* AppDatabase.swift */,
 				527E9DD02457D23400DAD0E1 /* ContentView.swift */,
+				527E9E052458124000DAD0E1 /* DbContext.swift */,
+				527E9E022458008800DAD0E1 /* Models */,
 				527E9DD22457D23500DAD0E1 /* Assets.xcassets */,
 				527E9DD72457D23500DAD0E1 /* Main.storyboard */,
 				527E9DDA2457D23500DAD0E1 /* Info.plist */,
@@ -135,6 +150,16 @@
 			path = TodoAppUITests;
 			sourceTree = "<group>";
 		};
+		527E9E022458008800DAD0E1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				527E9E03245808E500DAD0E1 /* ToDoTask.swift */,
+				527E9E07245812B900DAD0E1 /* DbManager.swift */,
+				527E9E092458197800DAD0E1 /* ToDoTaskManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,6 +176,9 @@
 			dependencies = (
 			);
 			name = TodoApp;
+			packageProductDependencies = (
+				527E9DFE2457D34700DAD0E1 /* RxGRDB */,
+			);
 			productName = TodoApp;
 			productReference = 527E9DCB2457D23400DAD0E1 /* TodoApp.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +251,9 @@
 				Base,
 			);
 			mainGroup = 527E9DC22457D23400DAD0E1;
+			packageReferences = (
+				527E9DFD2457D34700DAD0E1 /* XCRemoteSwiftPackageReference "RxGRDB" */,
+			);
 			productRefGroup = 527E9DCC2457D23400DAD0E1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -266,8 +297,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				527E9E012457F68700DAD0E1 /* AppDatabase.swift in Sources */,
+				527E9E062458124000DAD0E1 /* DbContext.swift in Sources */,
+				527E9E08245812B900DAD0E1 /* DbManager.swift in Sources */,
 				527E9DD12457D23400DAD0E1 /* ContentView.swift in Sources */,
+				527E9E04245808E500DAD0E1 /* ToDoTask.swift in Sources */,
 				527E9DCF2457D23400DAD0E1 /* AppDelegate.swift in Sources */,
+				527E9E0A2458197800DAD0E1 /* ToDoTaskManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,6 +633,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		527E9DFD2457D34700DAD0E1 /* XCRemoteSwiftPackageReference "RxGRDB" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxGRDB.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.18.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		527E9DFE2457D34700DAD0E1 /* RxGRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 527E9DFD2457D34700DAD0E1 /* XCRemoteSwiftPackageReference "RxGRDB" */;
+			productName = RxGRDB;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 527E9DC32457D23400DAD0E1 /* Project object */;
 }
