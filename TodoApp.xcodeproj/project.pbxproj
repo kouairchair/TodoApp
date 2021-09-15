@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		527E9DCF2457D23400DAD0E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E9DCE2457D23400DAD0E1 /* AppDelegate.swift */; };
+		527E9DD12457D23400DAD0E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E9DD02457D23400DAD0E1 /* ContentView.swift */; };
 		527E9DD32457D23500DAD0E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 527E9DD22457D23500DAD0E1 /* Assets.xcassets */; };
 		527E9DD62457D23500DAD0E1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 527E9DD52457D23500DAD0E1 /* Preview Assets.xcassets */; };
 		527E9DD92457D23500DAD0E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 527E9DD72457D23500DAD0E1 /* Main.storyboard */; };
@@ -19,7 +20,6 @@
 		527E9E062458124000DAD0E1 /* DbContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E9E052458124000DAD0E1 /* DbContext.swift */; };
 		527E9E08245812B900DAD0E1 /* DbManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E9E07245812B900DAD0E1 /* DbManager.swift */; };
 		527E9E0A2458197800DAD0E1 /* ToDoTaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E9E092458197800DAD0E1 /* ToDoTaskManager.swift */; };
-		BFDE867E26F2B6F30099D516 /* TestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDE867D26F2B6F30099D516 /* TestClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +42,7 @@
 /* Begin PBXFileReference section */
 		527E9DCB2457D23400DAD0E1 /* TodoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		527E9DCE2457D23400DAD0E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		527E9DD02457D23400DAD0E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		527E9DD22457D23500DAD0E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		527E9DD52457D23500DAD0E1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		527E9DD82457D23500DAD0E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,7 +59,6 @@
 		527E9E052458124000DAD0E1 /* DbContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbContext.swift; sourceTree = "<group>"; };
 		527E9E07245812B900DAD0E1 /* DbManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbManager.swift; sourceTree = "<group>"; };
 		527E9E092458197800DAD0E1 /* ToDoTaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTaskManager.swift; sourceTree = "<group>"; };
-		BFDE867D26F2B6F30099D516 /* TestClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +112,7 @@
 			children = (
 				527E9DCE2457D23400DAD0E1 /* AppDelegate.swift */,
 				527E9E002457F68700DAD0E1 /* AppDatabase.swift */,
+				527E9DD02457D23400DAD0E1 /* ContentView.swift */,
 				527E9E052458124000DAD0E1 /* DbContext.swift */,
 				527E9E022458008800DAD0E1 /* Models */,
 				527E9DD22457D23500DAD0E1 /* Assets.xcassets */,
@@ -119,7 +120,6 @@
 				527E9DDA2457D23500DAD0E1 /* Info.plist */,
 				527E9DDB2457D23500DAD0E1 /* TodoApp.entitlements */,
 				527E9DD42457D23500DAD0E1 /* Preview Content */,
-				BFDE867D26F2B6F30099D516 /* TestClass.swift */,
 			);
 			path = TodoApp;
 			sourceTree = "<group>";
@@ -297,10 +297,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFDE867E26F2B6F30099D516 /* TestClass.swift in Sources */,
 				527E9E012457F68700DAD0E1 /* AppDatabase.swift in Sources */,
 				527E9E062458124000DAD0E1 /* DbContext.swift in Sources */,
 				527E9E08245812B900DAD0E1 /* DbManager.swift in Sources */,
+				527E9DD12457D23400DAD0E1 /* ContentView.swift in Sources */,
 				527E9E04245808E500DAD0E1 /* ToDoTask.swift in Sources */,
 				527E9DCF2457D23400DAD0E1 /* AppDelegate.swift in Sources */,
 				527E9E0A2458197800DAD0E1 /* ToDoTaskManager.swift in Sources */,
